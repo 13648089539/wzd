@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="ITuserDao">  
+     <select id="ITuserDao.getUser" resultType="com.paladin.wzd.dto.User">  
+        select * from pal.tuser  
+    </select>  
+    
+    <insert id="ITuserDao.addUser" parameterType="com.paladin.wzd.dto.User">   
+	    	insert into pal.tuser values(#{name},#{pwd})
+    </insert>
+</mapper>  
